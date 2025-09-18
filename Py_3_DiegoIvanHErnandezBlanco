@@ -1,0 +1,220 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/IvanHernandez26/Trabajo-Analisis-de-Datos/blob/main/Py_3_DiegoIvanHErnandezBlanco\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "################## LISTAS ##############\n",
+        "\n",
+        "lista_vacia = []\n",
+        "lista_vacia_2 = list()\n",
+        "\n",
+        "marcas_autos = [\"toyota\", \"honda\", \"ford\", \"toyota\"]\n",
+        "\n",
+        "marcas_autos.append(\"chevrolet\")\n",
+        "marcas_autos.insert(0, \"bmw\")\n",
+        "marcas_autos.insert(3, \"bmw\")\n",
+        "marcas_autos[3] = \"ferrari\"\n",
+        "\n",
+        "elemento_cero_marcas_autos = marcas_autos.pop(0)\n",
+        "ultimo_elemento_marcas_autos = marcas_autos.pop()\n",
+        "marcas_autos.remove(\"honda\")\n",
+        "# marcas_autos.clear()\n",
+        "contador_marcas_autos = 0\n",
+        "while \"toyota\" in marcas_autos:\n",
+        "  marcas_autos.remove(\"toyota\")\n",
+        "  contador_marcas_autos += 1\n",
+        "\n",
+        "# La forma de acceder a los elementos de una lista es con el operador [inicio:fin]. Indicando el inicio de elementos que quieres de la lista\n",
+        "# y fin indica el elemento - 1 que va recoger de la lista. Los indices empiezan en 0.\n",
+        "numeros_marcas_autos = [1,2,3,4,5]\n",
+        "primer_elemento_marcas_autos = numeros_marcas_autos[0]\n",
+        "dos_primeros_elementos_marcas_autos = numeros_marcas_autos[0:2]\n",
+        "ultimo_elemento_marcas_autos = numeros_marcas_autos[-1]\n",
+        "dos_ultimos_elementos_marcas_autos = numeros_marcas_autos[-2:]"
+      ],
+      "metadata": {
+        "id": "zlGVSvv0Nn5I"
+      },
+      "execution_count": 16,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(marcas_autos)\n",
+        "print(contador_marcas_autos)\n",
+        "print(elemento_cero_marcas_autos)\n",
+        "print(ultimo_elemento_marcas_autos)\n",
+        "print(dos_primeros_elementos_marcas_autos)\n",
+        "print(dos_ultimos_elementos_marcas_autos)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "21rz60rBPBuB",
+        "outputId": "e4137095-8372-49d5-973a-ad3e38f73038"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['ferrari', 'ford']\n",
+            "2\n",
+            "bmw\n",
+            "5\n",
+            "[1, 2]\n",
+            "[4, 5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "################### SETS #################\n",
+        "#nuevo_sets = set()\n",
+        "\n",
+        "nuevo_set = {\"Brayan\", \"Alexis\"}\n",
+        "\n",
+        "nuevo_set.update ({\"Alexis\", \"Ivan\", \"Brayan\"})\n",
+        "copia_set = nuevo_set.copy()\n",
+        "\n",
+        "copia_set.discard(\"Alexis\")\n",
+        "copia_set.remove(\"Ivan\")\n",
+        "copia_set.pop()\n",
+        "copia_set.clear()"
+      ],
+      "metadata": {
+        "id": "72rMRSgsQAW8"
+      },
+      "execution_count": 21,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nuevo_set"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JFSpEumLRt93",
+        "outputId": "8f6cde82-a476-4326-9135-4130c66d8c64"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'Alexis', 'Brayan', 'Ivan'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 19
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "copia_set"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oLnGD3aqSU68",
+        "outputId": "f5eac2e4-1807-4138-a25a-0f3b34fea259"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'Brayan', 'Ivan'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 22
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from re import I\n",
+        "################ TUPLA #####################\n",
+        "random = (90, \"venus\", 16, \"Kratos\")\n",
+        "\n",
+        "print(\"El primer elemento es:\", azar[0])\n",
+        "print(\"El cuarto elemento es:\", azar[3])\n",
+        "\n",
+        "for i in azar:\n",
+        "  print(i)\n",
+        "\n",
+        "remover = \"venus\"\n",
+        "nueva_tupla = tuple(i for i in azar if i != remover)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Sy4i04Q2SqaC",
+        "outputId": "14373d21-633d-42b6-cc35-2eb382c637c7"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "El primer elemento es: 90\n",
+            "El cuarto elemento es: Kratos\n",
+            "90\n",
+            "venus\n",
+            "16\n",
+            "Kratos\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "1XlE_8YYVgLK"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Te damos la bienvenida a Colab",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
