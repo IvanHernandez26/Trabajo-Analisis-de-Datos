@@ -1,0 +1,851 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/IvanHernandez26/Trabajo-Analisis-de-Datos/blob/main/py_3_DiegoIvanHernandezBlanco\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "JGlbKnqy5Uvr"
+      },
+      "source": [
+        "# **FUNDAMENTOS DE PYTHON**  \n",
+        "\n",
+        "1. Tipos de datos básicos y operadores\n",
+        "\n",
+        "2. Estructuras de datos\n",
+        "\n",
+        "3. Condicionales\n",
+        "\n",
+        "4. Bucles\n",
+        "\n",
+        "5. Funciones\n",
+        "\n",
+        "6. Programación orientada a objetos\n",
+        "\n",
+        "<img src=\"https://github.com/joseisaiasmartinezcorona/AnaliticaLab/blob/imgs/python.png?raw=1\" width=\"450px\" height=\"200px\">"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ChZS5A9a5Uvs"
+      },
+      "source": [
+        "### **1. TIPOS DE DATOS BÁSICOS Y OPERADORES**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "hNfwSIlP5Uvs"
+      },
+      "outputs": [],
+      "source": [
+        "################### TIPOS DE DATOS BASICOS #####################\n",
+        "\n",
+        "# Una variable es un espacio asignado en memoria RAM y que ocupa un tamaño dependiendo de su tipo de datos,\n",
+        "# los tipos de datos básicos que implementa Python por defecto son los siguientes.\n",
+        "\n",
+        "#Números (Entero, float)\n",
+        "contador: int = 0\n",
+        "contador_1 = 1\n",
+        "\n",
+        "numero_pi: float = 3.14\n",
+        "# Booleanos\n",
+        "es_verdad: bool=True\n",
+        "es_mentira: bool=False\n",
+        "\n",
+        "\n",
+        "\n",
+        "# String\n",
+        "mi_nombre: str=\"Diego Ivan\"\n",
+        "\n",
+        "\n",
+        "\n",
+        "################### OPERADORES #####################\n",
+        "\n",
+        "# Un operador es un signo que utilizamos para señalar que operacion realizamos entre dos o más operandos, por ejemplo el operador de suma, el de resta,\n",
+        "# multiplicación y otros más específicos de la programación\n",
+        "\n",
+        "################### OPERADORES ARITMETICOS #####################\n",
+        "suma = 1 + 1\n",
+        "resta = 1 - 1\n",
+        "multiplicacion = 10 * 10\n",
+        "division_con_decimales = 18 / 5\n",
+        "division_sin_decimales = 18 // 5\n",
+        "#instruccion que calcula el modulo de la division entre dos numeros\n",
+        "modulo = 11 % 10\n",
+        "potencia = 2 ** 3\n",
+        "\n",
+        "################### OPERADORES RELACIONALES #####################\n",
+        "mayor_que = 2>1\n",
+        "menor_que = 1<2\n",
+        "igual_que = 1==1\n",
+        "mayor_o_igual_que = 2>=1\n",
+        "menor_o_igual_que = 1<=2\n",
+        "diferente_que = 2!=1\n",
+        "\n",
+        "################### OPERADORES LOGICOS #####################\n",
+        "and_operation = True and True\n",
+        "or_operation = True or False\n",
+        "not_operation = not False\n",
+        "################### OPERADORES DE PERTENENCIA #####################\n",
+        "\n",
+        "################### OPERADORES DE IDENTIDAD #####################\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "edad1 = int(input(\"Dime tu edad: \"))\n",
+        "edad2 = int(input(\"Dime tu edad: \"))\n",
+        "edad3 = int(input(\"Dime tu edad: \"))\n",
+        "\n",
+        "# Find the maximum and minimum ages\n",
+        "max_edad = max(edad1, edad2, edad3)\n",
+        "min_edad = min(edad1, edad2, edad3)\n",
+        "\n",
+        "# Use an if statement to determine which age is the greatest\n",
+        "if edad1 > edad2 and edad1 > edad3:\n",
+        "  print(\"La edad 1 es la mayor\")\n",
+        "elif edad2 > edad1 and edad2 > edad3:\n",
+        "  print(\"La edad 2 es la mayor\")\n",
+        "else:\n",
+        "  print(\"La edad 3 es la mayor\")\n",
+        "\n",
+        "\n",
+        "# Calculate the range\n",
+        "rango = max_edad - min_edad\n",
+        "\n",
+        "# Print the ages in descending order\n",
+        "print(f\"Las edades de mayor a menor son: {max_edad}, {edad1 if (edad1 != max_edad and edad1 != min_edad) else (edad2 if (edad2 != max_edad and edad2 != min_edad) else edad3)}, {min_edad}\")\n",
+        "\n",
+        "# Calculate and print the average\n",
+        "promedio = (edad1 + edad2 + edad3) / 3\n",
+        "print(f\"El promedio de las edades es: {promedio}\")\n",
+        "print(f\"El rango de las edades es: {rango}\")"
+      ],
+      "metadata": {
+        "id": "tEDwcjhZ5WyP",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e09d2ff1-7263-43c1-eca2-27cd7adb7530"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Dime tu edad: 18\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "BgKeR8oh5Uvt"
+      },
+      "source": [
+        "### **2. ESTRUCTURAS DE DATOS**"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1d609TxT5Uvt"
+      },
+      "source": [
+        "#### **2.1 LISTAS**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "xsDqE6o85Uvu"
+      },
+      "outputs": [],
+      "source": [
+        "################### 1.CREACIÓN DE LISTAS #####################\n",
+        "\n",
+        "# 1. Lista vacía\n",
+        "lista_vacia = []\n",
+        "lista_vacia_2 = list()\n",
+        "\n",
+        "# 2. Lista con elementos\n",
+        "motocicletas = [\"honda\", \"yamaha\", \"suzuki\", \"honda\"]\n",
+        "\n",
+        "################### 2.INSERCIONES Y ACTUALIZACIONES #####################\n",
+        "motocicletas.append(\"ducati\")\n",
+        "motocicletas.insert(0, \"dealim\")\n",
+        "motocicletas.insert(3, \"dealim\")\n",
+        "motocicletas[3] = \"ducati\"\n",
+        "\n",
+        "################### 3.BORRADOS #####################\n",
+        "elemento_cero = motocicletas.pop(0)\n",
+        "ultimo_elemeto = motocicletas.pop()\n",
+        "motocicletas.remove(\"yamaha\")\n",
+        "# motocicletas.clear()\n",
+        "contador = 0\n",
+        "while \"honda\" in motocicletas:\n",
+        "  motocicletas.remove(\"honda\")\n",
+        "  contador += 1\n",
+        "\n",
+        "################# 4.ACCESO A LAS LISTAS ######################\n",
+        "\n",
+        "# La forma de acceder a los elementos de una lista es con el operador [inicio:fin]. Indicando el inicio de elementos que quieres de la lista\n",
+        "# y fin indica el elemento - 1 que va recoger de la lista. Los indices empiezan en 0.\n",
+        "numeros = [1,2,3,4,5]\n",
+        "primer_elemento = numeros[0]\n",
+        "dos_primeros_elementos = numeros[0:2]\n",
+        "ultimo_elemento = numeros[-1]\n",
+        "dos_ultimos_elementos = numeros[-2:]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"El primer elemento es\", primer_elemento)\n",
+        "print(\"Los 2 primeros elementos son\", dos_primeros_elementos)\n",
+        "print(\"La lista original es\", numeros)\n",
+        "print(\"El ultimo elemento es\", ultimo_elemento)\n",
+        "print(\"Los 2 ultimos elementos son\", dos_ultimos_elementos)\n",
+        "n"
+      ],
+      "metadata": {
+        "id": "UlRpmPZ5NOpL"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ultimo_elemeto"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "od-p4TCRG_VN",
+        "outputId": "152b761a-1e3f-425d-983b-7c78b55ffad5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'ducati'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 39
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = len(motocicletas)\n",
+        "for i in range(0,n):\n",
+        "  print(motocicletas [i])\n",
+        "\n",
+        "\n",
+        "print(\"se borraron\", contador)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uVnUyeX-BHCV",
+        "outputId": "73dc2822-d168-4595-d1c6-5dea15af7bee"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ducati\n",
+            "suzuki\n",
+            "se borraron 2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7RERGwWG5Uvu"
+      },
+      "source": [
+        "#### **2.2 SETS**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "id": "20yq-8k05Uvu",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b1a4ce12-1c34-49ce-bac4-5b87c132ea3d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n"
+          ]
+        }
+      ],
+      "source": [
+        "################### 1.CREACIÓN DE SETS #####################\n",
+        "\n",
+        "# 1. set vacío\n",
+        "#nuevo_set = set()\n",
+        "\n",
+        "# 2. Inicializar un set con elementos\n",
+        "nuevo_set = {\"uno\", \"dos\"}\n",
+        "\n",
+        "################### 2.INSERTAR Y ACTUALIZAR #####################\n",
+        "nuevo_set.update({\"dos\",\"tres\",\"uno\"})\n",
+        "copia_set = nuevo_set.copy()\n",
+        "\n",
+        "################### 3.BORRADOS #####################\n",
+        "copia_set.discard(\"dos\")\n",
+        "################### 4.OPERACIONES DE SETS #####################\n",
+        "set_uno = {1,2,3,4}\n",
+        "set_dos = {4,5,6,7}\n",
+        "\n",
+        "\n",
+        "################### 5.ACCESO A LOS SETS #####################\n",
+        "for element in set_uno:\n",
+        "  print(element)\n",
+        "#No hay una forma de acceder de forma indexada"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "set_dos"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SglFZoV8IgyR",
+        "outputId": "8eb59521-02bd-4d5b-97b1-5fb5955c40bb"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{4, 5, 6, 7}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nuevo_set"
+      ],
+      "metadata": {
+        "id": "vX8LpUz5DXku",
+        "outputId": "4e173a35-21a4-473b-dddc-32d29d59c91a",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'dos', 'tres', 'uno'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 46
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Geab-cI-5Uvu"
+      },
+      "source": [
+        "#### **2.3 TUPLAS**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "id": "wkMtxc8d5Uvu",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8d46efec-d3cb-4f12-d5ab-740c3251bc2d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Elementos de tupla_uno:\n",
+            "Arturo\n",
+            "Lorenzo\n",
+            "Hernandez\n"
+          ]
+        }
+      ],
+      "source": [
+        "################### 1.CREACIÓN DE TUPLAS #####################\n",
+        "\n",
+        "tupla_vacia =()\n",
+        "\n",
+        "################### 2.INSERTAR Y ACTUALIZAR #####################\n",
+        "tupla_uno= (\"Arturo\", \"Lorenzo\",\"Hernandez\")\n",
+        "tupla_dos = (\"R2D2\", \"Coder\")\n",
+        "\n",
+        "# Tuples are immutable, so you cannot insert or update elements directly.\n",
+        "# To \"modify\" a tuple, you need to create a new one.\n",
+        "nueva_tupla = tupla_uno + (\"Martinez\",) # Adding an element\n",
+        "otra_tupla = tupla_uno[:2] + (\"Code Master\",) + tupla_uno[2:] # Updating an element\n",
+        "\n",
+        "################### 3.BORRADOS #####################\n",
+        "\n",
+        "# Tuples are immutable, so you cannot delete elements directly.\n",
+        "# To \"delete\" elements, you need to create a new tuple excluding the elements you want to remove.\n",
+        "tupla_sin_lorenzo = tuple(item for item in tupla_uno if item != \"Lorenzo\")\n",
+        "\n",
+        "################### 4.OPERACIONES DE TUPLAS #####################\n",
+        "\n",
+        "# Concatenation\n",
+        "tupla_concatenada = tupla_uno + tupla_dos\n",
+        "\n",
+        "# Repetition\n",
+        "tupla_repetida = tupla_dos * 3\n",
+        "\n",
+        "# Length\n",
+        "longitud_tupla_uno = len(tupla_uno)\n",
+        "\n",
+        "# Membership\n",
+        "existe_arturo = \"Arturo\" in tupla_uno\n",
+        "existe_java = \"Java\" in tupla_uno\n",
+        "\n",
+        "\n",
+        "################### 5.ACCESO A LOS TUPLAS #####################\n",
+        "\n",
+        "# Acceso de forma indexada\n",
+        "primer_elemento = tupla_uno[0]\n",
+        "ultimo_elemento = tupla_uno[-1]\n",
+        "\n",
+        "# Acceso con intervalos de elementos\n",
+        "primeros_dos = tupla_uno[0:2]\n",
+        "ultimos_dos = tupla_uno[-2:]\n",
+        "\n",
+        "# Acceso con bucle for\n",
+        "print(\"Elementos de tupla_uno:\")\n",
+        "for elemento in tupla_uno:\n",
+        "  print(elemento)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "eEZiHIam5Uvv"
+      },
+      "source": [
+        "#### **2.4 DICCIONARIOS**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 7,
+      "metadata": {
+        "id": "8dJ8wPWi5Uvv",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f642b1c9-e993-4bc6-c696-9346129bafb5"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Diccionario vacío: {}\n",
+            "Diccionario con tuplas: {'clave1': 1, 'clave2': 2}\n",
+            "Diccionario con valores: {'nombre': 'Diego', 'edad': 30, 'ciudad': 'Mexico'}\n",
+            "Diccionario después de inserción: {'nombre': 'Diego', 'edad': 30, 'ciudad': 'Mexico', 'ocupacion': 'Ingeniero'}\n",
+            "Diccionario después de actualización: {'nombre': 'Diego', 'edad': 31, 'ciudad': 'Mexico', 'ocupacion': 'Ingeniero'}\n",
+            "Diccionario después de eliminar 'ciudad': {'nombre': 'Diego', 'edad': 31, 'ocupacion': 'Ingeniero'}\n",
+            "Diccionario después de pop('edad'): {'nombre': 'Diego', 'ocupacion': 'Ingeniero'}\n",
+            "Valor eliminado: 31\n",
+            "Acceso por clave 'nombre': Diego\n",
+            "Acceso seguro por clave 'ocupacion': Ingeniero\n",
+            "Claves del diccionario: dict_keys(['nombre', 'ocupacion'])\n",
+            "Valores del diccionario: dict_values(['Diego', 'Ingeniero'])\n",
+            "Items del diccionario: dict_items([('nombre', 'Diego'), ('ocupacion', 'Ingeniero')])\n",
+            "Iterando sobre el diccionario:\n",
+            "Clave: nombre, Valor: Diego\n",
+            "Clave: ocupacion, Valor: Ingeniero\n"
+          ]
+        }
+      ],
+      "source": [
+        "################### 1.CREACIÓN Y ACCESO DE DICCIONARIOS #####################\n",
+        "\n",
+        "# Diccionario vacío inicializado con dict()\n",
+        "diccionario_vacio = dict()\n",
+        "print(\"Diccionario vacío:\", diccionario_vacio)\n",
+        "\n",
+        "# Diccionario definido con tuplas\n",
+        "diccionario_con_tuplas = dict([('clave1', 1), ('clave2', 2)])\n",
+        "print(\"Diccionario con tuplas:\", diccionario_con_tuplas)\n",
+        "\n",
+        "# Diccionario inicializado con valores\n",
+        "diccionario_con_valores = {\"nombre\": \"Diego\", \"edad\": 30, \"ciudad\": \"Mexico\"}\n",
+        "print(\"Diccionario con valores:\", diccionario_con_valores)\n",
+        "\n",
+        "\n",
+        "################### 2.INSERCION Y ACTUALIZACION EN DICCIONARIOS #####################\n",
+        "\n",
+        "# Inserción de un nuevo elemento\n",
+        "diccionario_con_valores[\"ocupacion\"] = \"Ingeniero\"\n",
+        "print(\"Diccionario después de inserción:\", diccionario_con_valores)\n",
+        "\n",
+        "# Actualización de un valor existente\n",
+        "diccionario_con_valores[\"edad\"] = 31\n",
+        "print(\"Diccionario después de actualización:\", diccionario_con_valores)\n",
+        "\n",
+        "\n",
+        "################### 3.BORRADOS DE ELEMENTOS EN DICCIONARIOS #####################\n",
+        "\n",
+        "# Eliminar un elemento por clave\n",
+        "del diccionario_con_valores[\"ciudad\"]\n",
+        "print(\"Diccionario después de eliminar 'ciudad':\", diccionario_con_valores)\n",
+        "\n",
+        "# Eliminar el último elemento insertado (en versiones recientes de Python)\n",
+        "# diccionario_con_valores.popitem()\n",
+        "# print(\"Diccionario después de popitem():\", diccionario_con_valores)\n",
+        "\n",
+        "# Eliminar un elemento por clave y obtener su valor\n",
+        "edad_eliminada = diccionario_con_valores.pop(\"edad\")\n",
+        "print(\"Diccionario después de pop('edad'):\", diccionario_con_valores)\n",
+        "print(\"Valor eliminado:\", edad_eliminada)\n",
+        "\n",
+        "\n",
+        "################### 4.ACCESO A ELEMENTOS EN DICCIONARIOS #####################\n",
+        "\n",
+        "# Acceso a un valor por clave\n",
+        "nombre = diccionario_con_valores[\"nombre\"]\n",
+        "print(\"Acceso por clave 'nombre':\", nombre)\n",
+        "\n",
+        "# Acceso seguro a un valor por clave (evita KeyError si la clave no existe)\n",
+        "ocupacion = diccionario_con_valores.get(\"ocupacion\")\n",
+        "print(\"Acceso seguro por clave 'ocupacion':\", ocupacion)\n",
+        "\n",
+        "# Acceso a todas las claves\n",
+        "claves = diccionario_con_valores.keys()\n",
+        "print(\"Claves del diccionario:\", claves)\n",
+        "\n",
+        "# Acceso a todos los valores\n",
+        "valores = diccionario_con_valores.values()\n",
+        "print(\"Valores del diccionario:\", valores)\n",
+        "\n",
+        "# Acceso a todos los pares clave-valor\n",
+        "items = diccionario_con_valores.items()\n",
+        "print(\"Items del diccionario:\", items)\n",
+        "\n",
+        "# Iterar sobre el diccionario\n",
+        "print(\"Iterando sobre el diccionario:\")\n",
+        "for clave, valor in diccionario_con_valores.items():\n",
+        "  print(f\"Clave: {clave}, Valor: {valor}\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "sSLP1-fE5Uvv"
+      },
+      "source": [
+        "### **3. CONDICIONALES**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "8Uz0Tl5U5Uvv"
+      },
+      "outputs": [],
+      "source": [
+        "############################# SINTAXIS #####################################\n",
+        "\n",
+        "#CONDICION SIMPLE\n",
+        "\n",
+        "#if condition1:\n",
+        "#   accion1\n",
+        "#elif condition2:\n",
+        "#   accion2\n",
+        "#else:\n",
+        "#   accion3\n",
+        "\n",
+        "#CONDICION ANIDADA\n",
+        "\n",
+        "#if condition1:\n",
+        "#   if condition2:\n",
+        "#       action1\n",
+        "#   elif condition3:\n",
+        "#       action2\n",
+        "#   else:\n",
+        "#       action3\n",
+        "#elif condition4:\n",
+        "#   action4\n",
+        "\n",
+        "############################# CONDICIONAL BOOLEANO #####################################\n",
+        "\n",
+        "\n",
+        "############################# CONDICIONAL BOOLEANO CON ELSE #####################################\n",
+        "\n",
+        "\n",
+        "\n",
+        "############################# CONDICIONAL NUMÉRICO #####################################\n",
+        "\n",
+        "\n",
+        "############################# CONDICIONAL NUMÉRICON CON ELIF #####################################\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "############################# CONDICIONALES CON STRINGS #####################################\n",
+        "\n",
+        "# 1.Comparar valor de strings.\n",
+        "\n",
+        "\n",
+        "# 2.Comprobar si un string es vacío.\n",
+        "\n",
+        "\n",
+        "\n",
+        "############################# CONDICIONALES CON LISTAS #####################################\n",
+        "\n",
+        "\n",
+        "# 1. Comprobar si un elemento está en una lista.\n",
+        "\n",
+        "\n",
+        "# 2. Comprobar si una lista está vacía.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "y1H-eT3J5Uvv"
+      },
+      "source": [
+        "### **4. BUCLES**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "MIdWpUYN5Uvv"
+      },
+      "outputs": [],
+      "source": [
+        "############################# BUCLES FOR IN #####################################\n",
+        "#Sintaxis:\n",
+        "#For elemento in elementos:\n",
+        "#   Acciones\n",
+        "\n",
+        "\n",
+        "\n",
+        "############################# BUCLES WHILE #####################################\n",
+        "#Sintaxis:\n",
+        "#While condicion:\n",
+        "#   Acciones\n",
+        "\n",
+        "\n",
+        "\n",
+        "############################# SENTENCIAS BREAK, PASS Y CONTINUE #####################################\n",
+        "\n",
+        "#Break: Detiene la ejecución del bucle.\n",
+        "\n",
+        "\n",
+        "#Pass: Se utiliza para dejar vacío un trozo de código que todavía no queremos especificar.\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "#Continue: Pasa a la siguiente iteración del bucle.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "tDF8dsn25Uvw"
+      },
+      "source": [
+        "### **5. FUNCIONES**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "bLg1e_mk5Uvw"
+      },
+      "outputs": [],
+      "source": [
+        "# Sintaxis: def nombre_funcion(parametro1 : Tipo1, parametro2: Tipo2) -> TipoDatoRetorno:\n",
+        "#               Acciones\n",
+        "#               return Valor (Opcional)\n",
+        "\n",
+        "############################# FUNCIÓN SIN PARÁMETROS #####################################\n",
+        "\n",
+        "\n",
+        "\n",
+        "############################# FUNCIÓN CON PARÁMETROS #####################################\n",
+        "\n",
+        "# Python es un lenguaje con tipado dinámico, es decir, no hace falta indicar que tipo de datos va a recibir o devolver una función ya que Python\n",
+        "# va a inferir los tipo de datos en tiempo de ejecución. Es muy recomendable indicar los tipos de datos para aumentar la legibilidad del código.\n",
+        "# Es más, aunque tu le indiques el tipo de parámetros y luego le pasas otro tipo de datos NO va a dar un fallo.\n",
+        "\n",
+        "\n",
+        "\n",
+        "############################# FUNCIÓN CON PARÁMETROS CON VALORES POR DEFECTO #####################################\n",
+        "\n",
+        "\n",
+        "\n",
+        "############################# FUNCIÓNES QUE DEVUELVE MÁS DE UN VALOR #####################################\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "aSLytMcr5Uvw"
+      },
+      "source": [
+        "### **6. PROGRAMACIÓN ORIENTADA A OBJETOS**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "H_teHUDg5Uvw"
+      },
+      "outputs": [],
+      "source": [
+        "\n",
+        "# Sintaxis:\n",
+        "\n",
+        "# class NombreClase():\n",
+        "#   Atributos\n",
+        "#   def __init__(self):\n",
+        "#       Inicializar atributos (constructor)\n",
+        "#   Setters and getters\n",
+        "#   Metodos de clase\n",
+        "#\n",
+        "\n",
+        "# Implementación de la clase mascota para un videojuego de animales.\n",
+        "\n",
+        "\n",
+        "\n",
+        "    ############################# ATRIBUTOS DE LA CLASE #####################################\n",
+        "\n",
+        "\n",
+        "    ############################# CONSTRUCTOR DE LA CLASE #####################################\n",
+        "\n",
+        "\n",
+        "\n",
+        "    ############################# METODOS GETTERS AND SETTERS #####################################\n",
+        "\n",
+        "    # Los metodos getters y setters sirven para ofrecer la funcionalidad de obtener el valor o cambiar el valor de los atributos que queremos darle\n",
+        "    # la posibilidad al programador que utilice la clase.\n",
+        "\n",
+        "    # Sintaxis getters: (Los atributos deben ser privados o protegidos, sino no tendría sentido hacer un get o set ya que podemos modificar y\n",
+        "    # consultar los atributos directamente, es más daría un bucle infinito.)\n",
+        "\n",
+        "    # def get_atributo(self) -> tipo_atributo:\n",
+        "    #   return self.__nombre_atributo\n",
+        "\n",
+        "    # Sintaxis setters:\n",
+        "    # def set_atributo(self, value) -> None:\n",
+        "    #   self.__nombre_atributo = value\n",
+        "\n",
+        "\n",
+        "\n",
+        "  ############################# METODOS DE CLASE #####################################\n",
+        "\n",
+        "  # Método que sirve para aumentar la salud a tu mascota.\n",
+        "\n",
+        "\n",
+        "\n",
+        "  # Método que sirve para aumentar de nivel a tu mascota en función del torneo que haya ganado.\n",
+        "\n"
+      ]
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.9.5"
+    },
+    "orig_nbformat": 4,
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
