@@ -45,7 +45,7 @@
         "id": "x8O50V1ErGji",
         "outputId": "a015067b-b315-43eb-b12d-82a7b4317f76"
       },
-      "execution_count": 41,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "display_data",
@@ -58,6 +58,16 @@
           "metadata": {}
         }
       ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Esta grafica de serie temporal con tendencia y estacionaridad ilustra como los datos pueden evolucionar en el tiempo mostrando un patron general mientras conservan fluctuaciones regulares.\n",
+        "Este tipo de analisis es clave para entender comportamientos en fenomenos reales como el clima, las ventas o el trafico de red, permitiendo tomar decisiones mas informadas y construir modelos predictivos más precisos."
+      ],
+      "metadata": {
+        "id": "N_ZAt_GouO79"
+      }
     }
   ],
   "metadata": {
